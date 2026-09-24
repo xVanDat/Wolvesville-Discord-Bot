@@ -92,14 +92,20 @@ DISCORD_TOKEN=your_discord_bot_token
 DISCORD_CLIENT_ID=your_discord_application_id
 DISCORD_GUILD_ID=your_test_server_id
 WOLVESVILLE_API_KEY=your_wolvesville_api_key
+lang=en
 ```
 
 Các biến tùy chọn đã có giá trị mặc định trong `.env.example`:
 
 ```env
+lang=en
 WOLVESVILLE_API_BASE_URL=https://api.wolvesville.com
 WOLVESVILLE_API_TIMEOUT_MS=10000
 ```
+
+`lang=en` là mặc định và làm cho mô tả command, lựa chọn, embed cùng thông báo lỗi sử dụng tiếng Anh. Đổi thành `lang=vi` để dùng tiếng Việt. Project cũng hỗ trợ `BOT_LANG=en|vi`; biến này được ưu tiên nếu cả hai cùng tồn tại.
+
+Sau khi đổi ngôn ngữ, hãy khởi động lại bot và chạy lại `npm run deploy` để Discord cập nhật mô tả slash command.
 
 `.env` đã được thêm vào `.gitignore`. Hãy kiểm tra lại trước mỗi lần commit để chắc chắn không có token hoặc API key thật.
 
@@ -163,4 +169,3 @@ Request Wolvesville gửi các header `Accept: application/json`, `Content-Type:
 ## Giấy phép
 
 Project được phát hành theo [MIT License](LICENSE). Bạn có thể sử dụng, sao chép, chỉnh sửa, hợp nhất, xuất bản, phân phối, cấp phép lại và bán các bản sao của phần mềm theo các điều khoản của giấy phép.
-

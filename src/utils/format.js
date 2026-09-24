@@ -1,3 +1,5 @@
+import { language, tr } from '../i18n.js';
+
 export const COLORS = Object.freeze({ primary: 0x7c3aed, clan: 0x16a34a, error: 0xdc2626 });
 
 export function truncate(value, max = 1024) {
@@ -6,7 +8,9 @@ export function truncate(value, max = 1024) {
 }
 
 export function number(value) {
-  return typeof value === 'number' && value >= 0 ? new Intl.NumberFormat('vi-VN').format(value) : 'Riêng tư';
+  return typeof value === 'number' && value >= 0
+    ? new Intl.NumberFormat(language === 'vi' ? 'vi-VN' : 'en-US').format(value)
+    : tr('Private', 'Riêng tư');
 }
 
 export function discordTime(value, style = 'R') {
@@ -25,5 +29,10 @@ export function roleChoice(entry) {
 }
 
 export function statusLabel(status) {
-  return ({ PLAY: 'Đang chơi', DEFAULT: 'Online', DND: 'Không làm phiền', OFFLINE: 'Offline' })[status] || status || '—';
+  return ({
+    PLAY: tr('Playing', 'Đang chơi'),
+    DEFAULT: 'Online',
+    DND: tr('Do not disturb', 'Không làm phiền'),
+    OFFLINE: 'Offline',
+  })[status] || status || '—';
 }

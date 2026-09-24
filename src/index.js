@@ -12,7 +12,7 @@ const api = new WolvesvilleClient({
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.once(Events.ClientReady, (readyClient) => {
-  console.log(`Ready as ${readyClient.user.tag}.`);
+  console.log(`Ready as ${readyClient.user.tag} (language: ${config.language}).`);
 });
 
 client.on(Events.InteractionCreate, async (interaction) => {

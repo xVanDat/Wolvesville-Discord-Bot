@@ -92,14 +92,20 @@ DISCORD_TOKEN=your_discord_bot_token
 DISCORD_CLIENT_ID=your_discord_application_id
 DISCORD_GUILD_ID=your_test_server_id
 WOLVESVILLE_API_KEY=your_wolvesville_api_key
+lang=en
 ```
 
 The optional variables already have defaults in `.env.example`:
 
 ```env
+lang=en
 WOLVESVILLE_API_BASE_URL=https://api.wolvesville.com
 WOLVESVILLE_API_TIMEOUT_MS=10000
 ```
+
+`lang=en` is the default and makes command descriptions, choices, embeds, and error messages use English. Change it to `lang=vi` for Vietnamese. `BOT_LANG=en|vi` is also supported and takes precedence when both variables are present.
+
+After changing the language, restart the bot and run `npm run deploy` again so Discord refreshes the slash-command descriptions.
 
 `.env` is excluded by `.gitignore`. Before every commit, verify that no real token or API key has been added to the repository.
 
@@ -163,4 +169,3 @@ Wolvesville requests include `Accept: application/json`, `Content-Type: applicat
 ## License
 
 This project is released under the [MIT License](LICENSE). You may use, copy, modify, merge, publish, distribute, sublicense, and sell copies of the software subject to the license terms.
-

@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import { language } from './i18n.js';
 
 function required(name) {
   const value = process.env[name]?.trim();
@@ -17,6 +18,7 @@ function positiveInteger(name, fallback) {
 }
 
 export const config = Object.freeze({
+  language,
   discordToken: required('DISCORD_TOKEN'),
   discordClientId: required('DISCORD_CLIENT_ID'),
   discordGuildId: process.env.DISCORD_GUILD_ID?.trim() || null,
