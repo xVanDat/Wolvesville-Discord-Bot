@@ -1,0 +1,36 @@
+{
+  "name": "wolvesville-discord-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Discord slash-command bot for the official Wolvesville public API",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xVanDat/Wolvesville-Discord-Bot.git"
+  },
+  "homepage": "https://github.com/xVanDat/Wolvesville-Discord-Bot#readme",
+  "bugs": {
+    "url": "https://github.com/xVanDat/Wolvesville-Discord-Bot/issues"
+  },
+  "keywords": [
+    "discord-bot",
+    "discord-js",
+    "wolvesville",
+    "slash-commands"
+  ],
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "deploy": "node src/deploy-commands.js",
+    "check": "node --check src/index.js && node --check src/deploy-commands.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "dotenv": "^17.4.2"
+  }
+}

@@ -160,4 +160,3 @@ npm test
 - This project does not provide match automation, XP farming, detection evasion, or automated gameplay.
 
 Wolvesville requests include `Accept: application/json`, `Content-Type: application/json`, and `Authorization: Bot <API key>` as required by the official documentation.
-
