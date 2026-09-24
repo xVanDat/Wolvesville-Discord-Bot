@@ -4,7 +4,7 @@
 
 A self-hosted Discord bot that uses slash commands to retrieve data from the **official Wolvesville Public API**. Each operator hosts their own instance with their own Discord token and Wolvesville API key.
 
-This project only uses official lookup and integration endpoints. It does not automate matches, farm XP, control gameplay, or perform write operations on clans.
+This project uses official lookup and integration endpoints, with clan commands intentionally limited to read-only operations.
 
 ## Commands
 
@@ -152,11 +152,15 @@ npm run check
 npm test
 ```
 
-## Security and acceptable use
+## Security
 
 - Never commit `.env` or hard-code tokens and API keys.
 - Never log `DISCORD_TOKEN` or `WOLVESVILLE_API_KEY`.
 - Use the Wolvesville Public API only in accordance with its current documentation and terms.
-- This project does not provide match automation, XP farming, detection evasion, or automated gameplay.
 
 Wolvesville requests include `Accept: application/json`, `Content-Type: application/json`, and `Authorization: Bot <API key>` as required by the official documentation.
+
+## License
+
+This project is released under the [MIT License](LICENSE). You may use, copy, modify, merge, publish, distribute, sublicense, and sell copies of the software subject to the license terms.
+
