@@ -1,6 +1,7 @@
 {
   "name": "wolvesville-discord-bot",
   "version": "1.0.0",
+  "license": "MIT",
   "private": true,
   "description": "Discord slash-command bot for the official Wolvesville public API",
   "repository": {
@@ -34,3 +35,4 @@
     "dotenv": "^17.4.2"
   }
 }
+
