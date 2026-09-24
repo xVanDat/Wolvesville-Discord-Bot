@@ -4,7 +4,7 @@
 
 Bot Discord mã nguồn mở dùng slash commands để tra cứu dữ liệu từ **Wolvesville Public API chính thức**. Mỗi người tự host bot bằng Discord token và Wolvesville API key của riêng mình.
 
-Project chỉ sử dụng các endpoint tra cứu/tích hợp chính thức. Bot không tự chơi trận, farm XP, điều khiển game hoặc thực hiện các thao tác ghi lên clan.
+Project sử dụng các endpoint tra cứu/tích hợp chính thức, trong đó các lệnh clan được chủ đích giới hạn ở thao tác chỉ đọc.
 
 ## Lệnh có sẵn
 
@@ -152,11 +152,15 @@ npm run check
 npm test
 ```
 
-## Bảo mật và phạm vi sử dụng
+## Bảo mật
 
 - Không commit `.env` hay ghi token/API key vào source.
 - Không log `DISCORD_TOKEN` hoặc `WOLVESVILLE_API_KEY`.
 - Chỉ dùng Wolvesville Public API đúng tài liệu và điều khoản hiện hành.
-- Project không cung cấp chức năng bot chơi trận, farm XP, né phát hiện hoặc tự động điều khiển game.
 
 Request Wolvesville gửi các header `Accept: application/json`, `Content-Type: application/json` và `Authorization: Bot <API key>` theo tài liệu chính thức.
+
+## Giấy phép
+
+Project được phát hành theo [MIT License](LICENSE). Bạn có thể sử dụng, sao chép, chỉnh sửa, hợp nhất, xuất bản, phân phối, cấp phép lại và bán các bản sao của phần mềm theo các điều khoản của giấy phép.
+
